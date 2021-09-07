@@ -1,0 +1,15 @@
+<form action="" method="POST">
+  {{ form.hidden_tag() }}
+  <div class="form-group">
+    <div class="form-floating mb-3">
+      {{ form.email(type="email", class="form-control", id="floatingInput", placeholder="name@example.com", value="name@example.com") }}
+      {{ form.email.label(for="floatingInput") }}
+    </div>
+    <div class="form-floating">
+      {{ form.password(type="password", class="form-control", id="floatingPassword", placeholder="Password") }}
+      {{ form.password.label(for="floatingPassword") }}
+    </div>
+  </div>
+  <br/>
+  {{ form.submit_button(class = "btn btn-secondary") }}
+</form>

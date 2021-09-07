@@ -1,0 +1,7 @@
+marvel_env
+.env
+__pycache__
+migrations
+Procfile
+app.db
+.vscode

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+  {% with messages = get_flashed_messages(with_categories = true) %}
+      {% if messages %}
+          {% for cat,msg in messages %}
+              {% if cat == 'user-failed' %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  {{ msg }}
+                  <button type="button" class="btn-close" data-bs-dismiss = "alert" aria-label="Close"></button>
+                </div>
+              {% endif %}
+          {% endfor %}
+      {% endif %}
+  {% endwith %}
+</div>
+
+<main class="container signup-container">
+  <div class="row">
+    <aside class="col-12">
+      <h2 class="text-white">Create Your Free Account</h2>
+      {% include 'form-signup.html' %}
+    </aside>
+  </div>
+</main>
+
+{% endblock content %}
