@@ -13,7 +13,7 @@ def signup():
     try:
         if request.method == 'POST' and form.validate_on_submit():
             first_name = form.first_name.data
-            last_name = form.first_name.data
+            last_name = form.last_name.data
             email = form.email.data
             password = form.password.data
             
